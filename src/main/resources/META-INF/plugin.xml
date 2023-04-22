@@ -1,0 +1,45 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>io.github.stdupanda.plugin.intellij.MyPlugin</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Show Selected File in Explorer</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="stdupanda@github.io" url="https://stdupanda.github.io/">demo.io</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description>
+        <![CDATA[
+            show selected file(s) in os system explorer.
+            <br/>
+            <b>usage:</>
+            <ol>
+                <li>Select File(s) in Project view</li>
+                <li>Click the fist Icon on the Project View</li>
+            </ol>
+            <a href="http://github.com/stdupanda/show-file-in-explorer">github</a>
+    ]]>
+    </description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="MyPluginNotificationGroup" displayType="BALLOON"/>
+    </extensions>
+    <actions>
+        <action id="io.github.stdupanda.plugin.intellij.OpenInExplorer"
+                class="io.github.stdupanda.plugin.intellij.OpenInExplorer"
+                icon="/icons/pluginIcon.svg" text="Open Selected File in Explorer" description="OpenInExt">
+            <add-to-group group-id="ProjectViewToolbar" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>

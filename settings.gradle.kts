@@ -1,0 +1,1 @@
+rootProject.name = "show-file-in-explorer"
