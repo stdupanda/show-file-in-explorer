@@ -8,22 +8,22 @@
     <name>Show Selected File in Explorer</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor email="stdupanda@github.io" url="https://stdupanda.github.io/">demo.io</vendor>
+    <vendor email="stdupanda@github.io" url="https://stdupanda.github.io/">stdupanda</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description>
         <![CDATA[
-            show selected file(s) in os system explorer.
+            <p>Show Selected file(s) In OS system explorer. Explorer or Finder. </p>
             <br/>
             <b>usage:</>
             <ol>
                 <li>Select File(s) in Project view</li>
                 <li>Click the fist Icon on the Project View</li>
             </ol>
-            <a href="http://github.com/stdupanda/show-file-in-explorer">github</a>
-    ]]>
+            <p>this is just a tool. Write reviews blow if you wish.</p>
+        ]]>
     </description>
 
     <!-- Product and plugin compatibility requirements.
