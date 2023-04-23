@@ -46,7 +46,8 @@ public class OpenInExplorer extends AnAction {
             return;
         }
 
-        Notifications.Bus.notifyAndHide(new Notification("MyPluginNotificationGroup",
+        Notifications.Bus.notify(new Notification("MyPluginNotificationGroup",
+                "",
                 "Select file(s) in project view at first",
                 NotificationType.INFORMATION), project);
     }
@@ -58,7 +59,7 @@ public class OpenInExplorer extends AnAction {
             path = path.replace("/", "\\");
             command = "explorer /e,/select," + path;
         } else if (os.toLowerCase().contains("mac")) {
-            command = "open ";
+            command = "open -n -R " + path;
         } else {
             return;
         }

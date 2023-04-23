@@ -17,12 +17,13 @@
         <![CDATA[
             <p>Show Selected file(s) In OS system explorer. Explorer or Finder. </p>
             <br/>
-            <b>usage:</>
+            <p>usage:</p>
             <ol>
                 <li>Select File(s) in Project view</li>
                 <li>Click the fist Icon on the Project View</li>
             </ol>
-            <p>this is just a tool. Write reviews blow if you wish.</p>
+            <br/>
+            <p>this is just a small tool. Write reviews blow if you wish.</p>
         ]]>
     </description>
 

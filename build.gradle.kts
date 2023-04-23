@@ -18,6 +18,8 @@ intellij {
     version.set("2022.2.4")
     type.set("IC") // Target IDE Platform
 
+    updateSinceUntilBuild.set(false)
+
     plugins.set(listOf(/* Plugin Dependencies */))
 }
 
