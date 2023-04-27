@@ -15,15 +15,15 @@
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description>
         <![CDATA[
-            <p>Show Selected file(s) In OS system explorer. Explorer or Finder. </p>
+            <p>Show Selected file(s) In OS system explorer. eg: Explorer or Finder. </p>
             <br/>
-            <p>usage:</p>
+            <p>Usage:</p>
             <ol>
                 <li>Select File(s) in Project view</li>
                 <li>Click the fist Icon on the Project View</li>
             </ol>
             <br/>
-            <p>this is just a small tool. Write reviews blow if you wish.</p>
+            <p>This is just a small tool. Write reviews below if you wish.</p>
         ]]>
     </description>
 
