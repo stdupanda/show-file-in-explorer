@@ -39,7 +39,7 @@
     <actions>
         <action id="io.github.stdupanda.plugin.intellij.OpenInExplorer"
                 class="io.github.stdupanda.plugin.intellij.OpenInExplorer"
-                icon="/icons/pluginIcon.svg" text="Open Selected File in Explorer" description="OpenInExt">
+                icon="/icons/icons8-folder-16.svg" text="Open Selected File in Explorer" description="OpenInExt">
             <add-to-group group-id="ProjectViewToolbar" anchor="first"/>
         </action>
     </actions>
