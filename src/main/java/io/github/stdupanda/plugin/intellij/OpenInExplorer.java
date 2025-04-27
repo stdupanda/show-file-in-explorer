@@ -21,6 +21,8 @@ import java.util.stream.Collectors;
  */
 public class OpenInExplorer extends AnAction {
 
+    public static final String MY_GROUP = "MyPluginNotificationGroup";
+
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
         final Project project = e.getProject();
@@ -31,6 +33,11 @@ public class OpenInExplorer extends AnAction {
         // get selected files
         VirtualFile vFile = e.getData(CommonDataKeys.VIRTUAL_FILE);
         VirtualFile[] vFileArr = e.getData(CommonDataKeys.VIRTUAL_FILE_ARRAY);
+
+        // check os
+        if (notSupported(project)) {
+            return;
+        }
 
         // open all selected
         if (vFileArr != null) {
@@ -46,10 +53,22 @@ public class OpenInExplorer extends AnAction {
             return;
         }
 
-        Notifications.Bus.notify(new Notification("MyPluginNotificationGroup",
+        Notifications.Bus.notify(new Notification(MY_GROUP,
                 "",
-                "Select file(s) in project view at first",
+                "Please Select file(s) in project view",
                 NotificationType.INFORMATION), project);
+    }
+
+    boolean notSupported(Project project) {
+        String os = System.getProperty("os.name").toLowerCase();
+        if (os.toLowerCase().contains("win") || os.toLowerCase().contains("mac")) {
+            return false;
+        }
+        Notifications.Bus.notify(new Notification(MY_GROUP,
+                "",
+                "OS not supported, currently only supports Windows and macOS.",
+                NotificationType.INFORMATION), project);
+        return true;
     }
 
     void doAction(String path) {
